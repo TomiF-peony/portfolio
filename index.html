@@ -4,8 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    作成中
+    <!-- ヘッダメニュー -->
+    <header>
+        <div class="head">
+            <h3>PORTFOLIO</h3>
+            <nav class="nav" aria-label="メインナビゲーション">
+                <a href="#about">ABOUT</a>
+                <a href="#skill">SKILL</a>
+                <a href="#works">WORKS</a>
+            </nav>
+        </div>
+    </header>
+
+    <!--コンテンツ -->
+    <main>
+        <!-- About -->
+        <section id="about">
+            <h2>About me.</h2>
+            <!-- <div class="about"> -->
+                <div>
+                    <div class="identity">
+                        <img src="./images/profile-icon.png" alt="プロフィールアイコン" class="profile-icon" />
+                        <div class="identity-text">
+                            <div class="name">
+                                TomiF
+                                <a href="https://github.com/your-account" target="_blank" rel="noopener noreferrer" class="github-link">
+                                    <img src="./images/github-icon.png" />
+                                </a>
+                            </div>
+                            <div class="role">SOFTWARE ENGINEER</div>
+                        </div>
+                    </div>
+                    <p>
+                        設計、実装、テストまで行えるソフトウェアエンジニアです。<br>
+                        C#（.NetFramework, xaml)・Python・Java(JSP含む)を用いた開発に携わってきました。<br>
+                        <br>
+                        「無理です」という前に、目的に合った実装の提案や、ご要望に応えられないか調査・試行錯誤することを大切にしています。<br>
+                        <br>
+                        ソースしかない、中途半端な仕様書しかない、などの状態から、現状を理解したうえで改善することや、ざっくりとした雰囲気のみの課題に対しても、実現可能な形へ落とし込むことを得意としています。<br>
+                        <br>
+                        プライベートでは、二児の母であり、犬猫の飼い主であり、韓国語も学べば、編み物もレジンも扱い、日々足りない時間を捻出すべく奮闘中。<br>
+                    </p>
+                </div>
+                <aside class="card">
+                    <div>
+                        <small>*PROFILE*</small>
+                        1987年生まれ。神奈川県在住。<br>
+                        工業高校卒業後、ITエンジニアとして就職、6年で結婚を契機に退職。<br>
+                        スタバのお姉さん、総務などの事務職を経て、約8年のブランクを抱えつつITエンジニアに復帰。<br>
+                        ライフワークバランスのため、2026年よりフリーランスとして活動開始。
+                    </div>
+                    <div>
+                        <small>*CAREER*</small>
+                        2005年 4月～2011年 6月: ITエンジニア<br>
+                        2011年 7月～2018年 3月: 事務職など<br>
+                        2018年 5月～2026年 3月: ITエンジニア<br>
+                        2026年 10月～: フリーランス<br>
+                    </div>
+                    <div>
+                        <small>*WORK STYLE*</small>
+                        フルリモートを希望しています。<br>
+                        ※育児中のため。スポットでの出社などは応相談。
+                    </div>
+                    <div>
+                        <small>*APPROACH*</small>
+                        課題を整理し、実現まで考える。<br>
+                        効率よく仕事する。<br>
+                        設計・開発・調査・改修なんでも来い。
+                    </div>
+                </aside>
+            <!-- </div> --->
+        </section>
+
+        <!-- Skills -->
+        <section id="skill">
+            <h2>Skills.</h2>
+            年数については編集中。
+            <div class="skill-grid">
+                <div class="card">
+                    <h3>言語</h3>
+                    C# / Python / Java / HTML5 / CSS3 / JavaScript / SQL
+                </div>
+                <div class="card">
+                    <h3>開発環境</h3>
+                    Windows / Linux / MacOS<br>
+                    Visual Studio / Visual Studio Code / Eclipse / PyCharm<br>
+                    SVN(TortoiseSVN), Git(個人利用)<br>
+                    AWS EC2, S3, SageMaker(研修のみ)<br>
+                    Docker(個人利用)
+                </div>
+                <div class="card">
+                    <h3>開発技術</h3>
+                    要件定義 / 画面設計 / 詳細設計 / 実装 / コード調査・解析
+                </div>
+                <div class="card">
+                    <h3>データ分析</h3>
+                    Python / Excel / Access
+                </div> 
+            </div>
+        </section>
+
+        <!-- Works -->
+        <section id="works">
+            <h2>Works.</h2>
+            作成中。
+        </section>
+    </main>
 </body>
 </html>
