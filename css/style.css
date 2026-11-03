@@ -101,8 +101,12 @@ header {
 .card {
     background: var(--white);
     border: 1px solid var(--line);
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 0;
 }
 .card div {
     font-size: 13px;
@@ -111,7 +115,43 @@ header {
 .card small {
     display: block;
     color: var(--muted);
+    font-weight: 600;
     letter-spacing: .12em;
+    text-decoration: underline;
+}
+.card small:before,
+.card small:after {
+    content: "*";
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 5px 11px;
+    border-radius: 5px;
+    font-size: 11px;
+    line-height: 1.5;
+    white-space: nowrap;
+}
+
+.tag-tech {
+    color: var(--text);
+    background: #F3F2F5;
+}
+
+.tag-active {
+    color: #735A99;
+    background: #EEE8F6;
+}
+
+.tag-inactive {
+    color: #999999;
+    background: #F1F1F1;
 }
 
 /* about */
@@ -120,11 +160,6 @@ header {
     grid-template-columns: minmax(0, 1.5fr) minmax(280px, 1fr);
     gap: 24px;
     align-items: stretch;
-}
-.about .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .identity {
@@ -167,11 +202,6 @@ header {
 }
 
 /* skill */
-.skill-grid {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 14px;
-}
 #skill h3 {
     font: 16px Georgia,serif;
     color: var(--lav);
@@ -179,9 +209,98 @@ header {
     margin: 0 0 12px;
 }
 
-/* work */
+.skill-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+}
+
+.skill-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.skill-table {
+    width: 100%;
+    min-width: 560px;
+    border-collapse: collapse;
+    font-size: 13px;
+    text-align: center;
+}
+
+.skill-table th {
+    padding: 12px 10px;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .04em;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--line);
+}
+
+.skill-table th:first-child,
+.skill-table td:first-child {
+    text-align: left;
+    padding-left: 12px;
+}
+
+.skill-table td {
+    padding-top: 15px;
+    white-space: nowrap;
+}
+
+.skill-table td:first-child {
+    font-weight: 500;
+    color: var(--text);
+}
+
+.skill-table td:not(:first-child) {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--lav);
+}
+
+/* Works */
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
 .work-card {
-    grid-template-columns: 1fr;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.work-card h3 {
+    margin: -12px 0 0;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.work-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.work-detail-title {
+    color: var(--text-sub);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-decoration: underline;
+}
+
+.works-message {
+    margin-top: 48px;
+    padding: 28px;
+    border-left: 3px solid var(--accent);
+    background: #FAF9FC;
+}
+
+.works-message h3 {
+    margin: 0 0 12px;
+    font-size: 18px;
 }
 
 /* PC用設定 */
@@ -190,17 +309,15 @@ header {
         padding: 30px;
         font-size: 14px;
     }
-
-    .container {
-        max-width: 1000px;
-        margin: 0 auto;
-        display: flex;
-    }
 }
 
 /* スマホ用設定 */
 @media screen and (max-width: 640px) {
-    .skill-grid {
+    .work-grid {
         grid-template-columns: 1fr;
+    }
+
+    .work-approach {
+        padding: 20px;
     }
 }
